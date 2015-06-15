@@ -1,6 +1,7 @@
-package com.example.disklrucache;
+package com.example.disklrucache.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.example.disklrucache.R;
 import com.example.disklrucache.Util.MD5Util;
 import com.example.disklrucache.Util.Util_download_image;
 import com.example.disklrucache.libcore.io.DiskLruCache;
@@ -18,7 +20,6 @@ import com.example.disklrucache.libcore.io.DiskLruCache;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.logging.LogRecord;
 
 
 public class MainActivity extends Activity {
@@ -104,6 +105,7 @@ public class MainActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this,ImageAcivity.class));
             return true;
         }
 
